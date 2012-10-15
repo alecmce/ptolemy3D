@@ -7,7 +7,6 @@ package com.godpaper.as3.views.components.jewels
 	//--------------------------------------------------------------------------
 	import flash.display.Graphics;
 	import flash.display.MovieClip;
-	import flash.display.Sprite;
 	import flash.filters.GlowFilter;
 	
 	import ptolemy.geom3D.core.Eye;
@@ -17,6 +16,7 @@ package com.godpaper.as3.views.components.jewels
 	
 	import starling.display.Sprite;
 	import starling.events.Event;
+	import starling.filters.BlurFilter;
 	
 	
 	/**
@@ -187,6 +187,8 @@ package com.godpaper.as3.views.components.jewels
 			var n:Number = size * 4 / 5;
 			
 			//			filters = [new GlowFilter(glow, 1, n, n)];
+//			this.filter = BlurFilter.createGlow();
+			this.filter = BlurFilter.createDropShadow();
 			
 			_eye = new Eye();
 			_eye.width = 0;
@@ -250,6 +252,8 @@ package com.godpaper.as3.views.components.jewels
 		private function updateJewel():void
 		{
 			_solid.angle += _dangle;
+			//
+//			this.filter = BlurFilter.createDropShadow();
 			
 			graphics.clear();
 			_scene.calculate();

@@ -10,6 +10,7 @@ package
 	import starling.core.Starling;
 	import starling.display.Sprite;
 	import starling.events.Event;
+	import starling.filters.BlurFilter;
 
 	/**
 	 * JewelsStarling.as class.   	
